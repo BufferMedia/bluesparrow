@@ -1,0 +1,13 @@
+.red {border:1px solid red !important;}
+
+.hide__me {
+	display: none
+}
+.form-error {animation: dd ease-in-out .5s 1;}
+@keyframes dd{
+  0% {transform:rotateY(0deg); }
+  25% {transform:rotateY(-10deg); }
+  50% {transform:rotateY(10deg);}
+  75% {transform:rotateY(-10deg); }
+  100% {transform:rotateY(0deg);}
+}

@@ -1,0 +1,48 @@
+{
+  "name": "bluereact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.5.11",
+    "@amcharts/amcharts4-geodata": "^4.1.7",
+    "axios": "^0.18.1",
+    "chart.js": "^2.8.0",
+    "jquery": "^3.4.1",
+    "mdbreact": "^4.19.2",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start npm",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "reactstart": "react-scripts start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "12.2.0",
+    "npm": "6.9.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}

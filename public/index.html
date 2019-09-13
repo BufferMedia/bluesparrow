@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+    active: function() {
+        sessionStorage.fonts = true;
+    }
+  });
+</script>
+
+<!--end::Web font -->
+<link rel="stylesheet" href="/css/style.css">
+<!--begin::Global Theme Styles -->
+<link href="/assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+
+<!--RTL version:<link href="assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+<link href="/assets/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+
+<!--RTL version:<link href="assets/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+
+<!--end::Global Theme Styles -->
+
+<!--begin::Page Vendors Styles -->
+<link href="/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+
+<!--RTL version:<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+
+<!--end::Page Vendors Styles -->
+<link rel="shortcut icon" href="/assets/default/media/img/logo/favicon.ico" />
+
+<!-- Form validator --->
+<link rel="stylesheet" type="text/css" href="/assets/vendors/form-validator-master/validator.css">
+<link rel="stylesheet" href="/css/App.css">
+<style type="text/css">
+  #blank {
+    width:100%;
+    position:fixed;
+    background:rgba(25, 42, 132,0.1);
+    height: 100%;
+    z-index:10000;
+    top:0;
+    display: none
+  }
+  #can {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+  }
+  #roller {
+    width:50px; 
+    height:50px; 
+    border-left:5px solid rgb(25, 42, 132);
+    border-top:5px solid #fff;
+    border-bottom:5px solid #fff;
+    border-right:5px solid rgb(25, 42, 132); 
+    position: relative; top:40%; 
+    margin:0 auto; 
+    border-radius:100%;
+    -webkit-animation: move 1s ease-in-out infinite; 
+    -moz-animation: move 1s ease-in-out infinite; 
+    -ms-animation: move 1s ease-in-out infinite; 
+    animation: move 1s ease-in-out infinite; 
+    /*background: radial-gradient(closest-corner at 40px 40px, #cfcfcf 0%, #eaeaea 63%)*/
+  }
+@-webkit-keyframes move{
+      0% {
+         -webkit-transform:rotateX(0deg); 
+       }
+      50% {
+        -webkit-transform:rotateX(90deg); 
+      }
+      100% {
+        -webkit-transform:rotateX(360deg); 
+      }
+    }
+    @keyframes move{
+      0% {
+        transform:rotate(0deg); 
+      }
+      50% {
+        transform:rotate(90deg); 
+      }
+      100% {
+        transform:rotate(360deg);
+      }
+    }
+    @-ms-keyframes move{
+      0% {
+        -ms-transform:rotate(0deg); 
+      }
+      50% {
+        -ms-transform:rotate(90deg);
+      }
+      100% {
+        -ms-transform:rotate(360deg); 
+      }
+    }
+    @-moz-keyframes move{
+      0% {
+        -moz-transform:rotate(0deg); 
+      }
+      50% {
+        -moz-transform:rotate(90deg);
+      }
+      100% {
+        -moz-transform:rotate(360deg);
+      }
+    }
+    #loader {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: rgba(255,255,255,.55);
+      color: #333;
+      z-index: 1000;
+      font-size: 3em;
+      padding-top: 5em;
+    }
+    #loader.loading {
+      display: block;
+    }
+    .table {
+      overflow-x: auto;
+      max-width: 100%;
+      display: block;
+    }
+</style>
+    <title>Bluesparrow CMS</title>
+  </head>
+  <body>
+    <div class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default" id="root">
+    </div>
+
+    <div id="loader">
+      <div>Please wait...</div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+<!--end::Global Theme Bundle -->
+
+<!--begin::Page Vendors -->
+<script src="assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+
+<!--end::Page Vendors -->
+
+<!--begin::Page Scripts -->
+<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
+<script src="assets/app/js/html-table.js" type="text/javascript"></script>
+<script src="assets/app/js/wizard/wizard.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/vendors/form-validator-master/validator.js"></script>
+<script type="text/javascript" src="js/summernote.js"></script>
+<script type="text/javascript" src="js/select2.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var url = window.location.pathname;
+    var linkArr = url.toString().split("/");
+    var fileName = linkArr[linkArr.length - 1];
+    $(".m-menu__link[href='"+fileName+"']").parent().addClass("m-menu__item--active");
+    $(".m-menu__link[href='"+fileName+"']").parent().parents().each(function(a, b){
+      
+      if(b.tagName.toLowerCase() == "li"){
+        $(b).addClass("m-menu__item--open");
+      }
+    });
+    $(".summernote").summernote({
+      height:800
+    });
+
+
+
+    //loader
+    let can = document.querySelector("#can");
+    let ctx = can.getContext("2d")
+
+    let hover = false
+    can.onmouseenter = function(){
+      hover = true;
+    }
+    can.onmouseout = function(){
+      hover = false;
+    }
+    let allCircle = [
+      {x:12.5, y:12.5, r:10, dy:1, color:"teal"},
+      {x:12.5*3, y:47.5, r:10, dy:-1, color:"gold"},
+      {x:12.5*5, y:12.5, r:10, dy:1, color:"fuchsia"},
+      {x:12.5*7, y:47.5, r:10, dy:-1, color:"orange"}
+    ]
+
+    function changeDim(){
+      
+      for(j in allCircle){
+        allCircle[j].y += allCircle[j].dy;
+        if(allCircle[j].y <= 12.5){
+          allCircle[j].dy = 1;
+        }
+        if(allCircle[j].y >= 47.5){
+          allCircle[j].dy = -1;
+        }
+      }
+    }
+
+    function draw(){
+      
+      ctx.fillStyle = "#fff"
+      ctx.clearRect(0, 0, 100, 60)
+      
+      for(i in allCircle){
+        ctx.beginPath();
+        ctx.fillStyle = allCircle[i].color
+        let x = allCircle[i].x;
+        let y = allCircle[i].y;
+        let r = allCircle[i].r;
+        ctx.arc(x, y, r, 0, 360)
+        ctx.fill()
+        ctx.beginPath();
+        ctx.fillStyle = "#eee";
+        ctx.arc(x, y, r/4, 0, 360)
+        ctx.fill()
+      }
+      if(!hover){
+        changeDim()
+      }
+        //
+      //console.log(allCircle)
+      requestAnimationFrame(draw)
+    }
+
+    draw()
+  });
+    
+</script>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+
+    <script type="text/javascript">
+        (function(){
+          // Create chart instance
+        
+        })()
+    </script> 
+    <script type="text/javascript">
+      // Create map instance
+      var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+      // Set map definition
+      chart.geodata = am4geodata_worldLow;
+
+      // Set projection
+      chart.projection = new am4maps.projections.Miller();
+
+      // Create map polygon series
+      var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+      // Make map load polygon (like country names) data from GeoJSON
+      polygonSeries.useGeodata = true;
+
+      // Configure series
+      var polygonTemplate = polygonSeries.mapPolygons.template;
+      polygonTemplate.tooltipText = "{name}";
+      polygonTemplate.fill = am4core.color("green");
+
+      // Create hover state and set alternative fill color
+      var hs = polygonTemplate.states.create("hover");
+      hs.properties.fill = am4core.color("#a1feae");
+    </script>
+
+    <script src="assets/vendors/custom/flot/flot.bundle.js" type="text/javascript"></script>
+    
+  </body>
+</html>
