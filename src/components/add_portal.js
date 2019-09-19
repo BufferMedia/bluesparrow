@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from '../axios'
+import {withRouter} from 'react-router-dom'
 
 class AddPortal extends React.Component{
 	constructor(props){
@@ -43,6 +44,7 @@ class AddPortal extends React.Component{
                         content_types: []
                     });
                     alert('Portal created successfully!')
+                    this.props.history.push('/list_portal')
                 }
             })
             .catch(err => {
@@ -232,4 +234,4 @@ class AddPortal extends React.Component{
    }
 } 
 
-export default AddPortal
+export default withRouter(AddPortal)

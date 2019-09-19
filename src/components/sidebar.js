@@ -24,7 +24,7 @@ class SideNavigation extends React.Component{
 								<h4 className="m-menu__section-text">MAIN</h4>
 								<i className="m-menu__section-icon flaticon-more-v2"></i>
 							</li>
-							<li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" className="m-menu__link m-menu__toggle"><i className="m-menu__link-icon flaticon-layers"></i><span className="m-menu__link-text">Services</span><i
+							{/* <li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" className="m-menu__link m-menu__toggle"><i className="m-menu__link-icon flaticon-layers"></i><span className="m-menu__link-text">Services</span><i
 									 className="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
 									<ul className="m-menu__subnav">
@@ -44,7 +44,7 @@ class SideNavigation extends React.Component{
 										<li className="m-menu__item " aria-haspopup="true"><a href="add_service.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Add New Product</span></a></li>
 									</ul>
 								</div>
-							</li>
+							</li> */}
 							<li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" className="m-menu__link m-menu__toggle"><i className="m-menu__link-icon flaticon-share"></i><span className="m-menu__link-text">Content</span><i
 									 className="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
@@ -100,13 +100,13 @@ class SideNavigation extends React.Component{
 									 className="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
 									<ul className="m-menu__subnav">
-										<li className="m-menu__item " aria-haspopup="true"><a href="report.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Reports</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="orders.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Orders</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="account_privacy.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Account & Privacy</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="report" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Reports</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="orders" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Orders</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="feature_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Features</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="subscription_plans" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Subscription Plans</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
 										
-										<li className="m-menu__item " aria-haspopup="true"><a href="subscription_plan.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Subscription Plans</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="subscription_plan_detail.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Subscription Details</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -117,10 +117,7 @@ class SideNavigation extends React.Component{
 										<li className="m-menu__item  m-menu__item--parent" aria-haspopup="true"><span className="m-menu__link"><span className="m-menu__link-text">User</span></span></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="add_user" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Add User</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="list_user" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">List User</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="user_access" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">User Access</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="profile" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Profile</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="add_user_menu_mapping" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Privileges</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="#" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">View User Activity</span></a></li>
 									</ul>
 								</div>
 							</li>

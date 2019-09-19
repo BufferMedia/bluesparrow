@@ -20,6 +20,9 @@ class ContentMasterAdd extends React.Component {
 		description: '',
 		content_type: '',
 		category: '',
+		fileupload:[],
+		thumbnail: [],
+		metadata: ''
 
 	  }
 
@@ -291,7 +294,7 @@ class ContentMasterAdd extends React.Component {
 																<div class="form-group m-form__group row">
 																	<label class="col-xl-3 col-lg-3 col-form-label">* Title:</label>
 																	<div class="col-xl-9 col-lg-9">
-																		<input type="text" name="title" class="form-control m-input" placeholder="Title"/>
+																		<input type="text" name="title" class="form-control m-input" placeholder="Title" required/>
 																		<span class="m-form__help">Please enter your content title</span>
 																	</div>
 																</div>
@@ -309,22 +312,22 @@ class ContentMasterAdd extends React.Component {
 														{/*<!--end: Form Wizard Step 1-->*/}
 						              	{/*<!--begin: Form Wizard Step 2-->*/}
 														<div class="m-wizard__form-step" id="m_wizard_form_step_2">
-															<div class="m-form__heading">
+																<div class="m-form__heading">
 																	<h3 class="m-form__heading-title">Add Content File</h3>
 																</div>
-																<div class="form-group m-form__group row">
-																	<div class="col-lg-12">
-																		<label class="form-control-label">* Upload File:</label>
-																		<input class="form-control m-input" id = "fileupload" type = "file"  />
-																		<span class="m-form__help">Please enter your preferred URL  to your dashboard</span>
-																	</div>
+
+
+																<div class="col-lg-12">
+																	<input type="text" name="" class="form-control m-input"  disabled value="<%=contentMasterDisplay[1]%>"/>
+																	<input type="text" class="form-control m-input" disabled value="<%=contentMasterDisplay[1]%>" />				
 																</div>
+
 
 																<div class="form-group m-form__group row">
 																	<div class="col-lg-12">
-																		<label class="form-control-label">* Dimensions:</label>
-																		<input type="text" name="dimensions" class="form-control m-input" placeholder="e.g 400x600" />
-																		<span class="m-form__help">Please enter your file dimensions</span>
+																		<label class="form-control-label">* Upload File:</label>
+																		<input class="form-control m-input" id = "fileupload" type = "file" required  />
+																		<span class="m-form__help">Please enter your preferred URL  to your dashboard</span>
 																	</div>
 																</div>
 																<div class="form-group m-form__group row">
