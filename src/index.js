@@ -21,6 +21,16 @@ import ListPortal from './components/list_portal';
 import ContentPortalMapping from './components/content_portal_mapping'
 import ReviewContent from './components/review_content'
 import ContentCategoryAdd from './components/content_category_add'
+import SubscriptionAdd from './components/subscription_add'
+import SubscriptionPlans from './components/subscription_plans'
+import FeatureAdd from './components/feature_add'
+import FeatureList from './components/feature_list'
+import CouponAdd from './components/coupon_add'
+import CouponList from './components/coupon_list'
+import CouponMap from './components/coupon_map'
+import Profile from './components/profile'
+import Orders from './components/orders'
+
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdbreact/dist/css/mdb.css";
@@ -97,6 +107,43 @@ class Main extends React.Component {
               <Route path="/content_category_add" component={()=>{
                 
                 return <ContentCategoryAdd sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/subscription_add" component={()=>{
+                
+                return <SubscriptionAdd sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/subscription_plans" component={()=>{
+                
+                return <SubscriptionPlans sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/feature_add" component={()=>{
+                
+                return <FeatureAdd sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/feature_list" component={()=>{
+                
+                return <FeatureList sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/coupon_add" component={()=>{
+                
+                return <CouponAdd sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/coupon_list" component={()=>{
+                
+                return <CouponList sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/coupon_map" component={()=>{
+                
+                return <CouponMap sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+              <Route path="/profile" component={()=>{
+                
+                return <Profile sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
+              }} />
+
+              <Route path="/orders" component={()=>{
+                
+                return <Orders sidebar={sidebarcomponent} footer={footerComponent} header={headercomponent}/>
               }} />
               
             </Route>

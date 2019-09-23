@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from '../axios'
 import { MDBDataTable, Row, Cols, Card, CardBody } from 'mdbreact';
+import util from '../util'
 
 class ListPortal extends React.Component{
 	constructor(props){
@@ -21,7 +22,7 @@ class ListPortal extends React.Component{
 	
 	loadPortals = async => {
 		   try{
-			   	axios.get('portals/paginate', axios.getHeaders())
+			   	axios.get('portals/paginate')
 			   .then(resp => {
 				   console.log(resp.data.data)
 				   this.setState({portalList: resp.data.data.portals.map( portal => {
@@ -29,7 +30,7 @@ class ListPortal extends React.Component{
 						   id: portal.id,
 						   name: portal.name,
 						   description: portal.description,
-						   content_type: [],
+						   content_type: util.serializeData(portal.content_types),
 						   Action: ''
 					   }
 				   })});
