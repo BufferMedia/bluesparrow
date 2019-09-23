@@ -4,7 +4,6 @@ import App from './App';
 import Home from './components/Home.js' 
 import SideNavigation from './components/sidebar.js'
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Redirect, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Login from './components/login';
 import AddUsers from './components/add_users'
