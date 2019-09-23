@@ -42,14 +42,14 @@ class Dashboard extends React.Component{
 		})  
 
 		//getting and keeping all features
-		axios.get(`features`)
+		axios.get(`feature`)
         .then(resp =>{
-			axios.setCookie('features', JSON.stringify(resp.data.data.features))
+			axios.setCookie('feature', JSON.stringify(resp.data.data.features))
         }).catch(err =>{
             console.log(err)
 		})  
-    }
-npm 
+	}
+	
 	render(){
 		return(
 			<div>
