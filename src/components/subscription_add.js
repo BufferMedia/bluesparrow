@@ -3,7 +3,22 @@ import React from 'react'
 
 class SubscriptionAdd extends React.Component{
      constructor(props){
-         super(props)
+		 super(props)
+		 
+		 this.state={
+			 
+			//availableFeatures,
+			//availablePortals,
+
+			 subscription_name: '',
+			 price:'',
+			 currency:'',
+			 portals: [],
+			 features: []
+		 }
+
+		 
+
      }
    render(){
          return(
@@ -293,12 +308,10 @@ class SubscriptionAdd extends React.Component{
 									<div class="m-form__actions m-form__actions">
 										<div class="row">
 											<div style={{margin: 'auto'}}>
-												<button type="reset" class="btn btn-brand">
+												<button class="btn btn-brand">
 													Create
 												</button>
-												<button type="reset" class="btn btn-secondary">
-													Cancel
-												</button>
+											
 											</div>
 										</div>
 									</div>
