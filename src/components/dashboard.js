@@ -40,6 +40,14 @@ class Dashboard extends React.Component{
         }).catch(err =>{
             console.log(err)
 		})  
+
+		//getting and keeping all portals
+		axios.get(`features`)
+        .then(res =>{
+			axios.setCookie('features', JSON.stringify(resp.data.data.features))
+        }).catch(err =>{
+            console.log(err)
+		})  
     }
 
 	render(){
