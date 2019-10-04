@@ -26,7 +26,6 @@ class AddUsers extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
 
     axios.post("users/create", this.state);
     axios

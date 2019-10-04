@@ -7,56 +7,29 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    axios
-      .get(`content-types`)
-      .then(res => {
-        axios.setCookie("content_types", JSON.stringify(res.data.data.data));
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    const requests = [
+      { url: "content-types", name: "content_types", field: "data" },
+      { url: "categories", name: "content_category" },
+      { url: "portals/paginate", name: "portals", field: "portals" },
+      { url: "metadata", name: "metadata", field: "metadatas" },
+      { url: "feature", name: "features", field: "features" }
+    ];
 
-    //getting and keeping all categories
-    axios
-      .get(`categories`)
-      .then(res => {
-        axios.setCookie("content_category", JSON.stringify(res.data.data));
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    //getting and keeping all portals
-    axios
-      .get(`portals/paginate`)
-      .then(res => {
-        axios.setCookie("portals", JSON.stringify(res.data.data));
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    //getting and keeping all portals
-    axios
-      .get(`metadata`)
-      .then(res => {
-        axios.setCookie("metadata", JSON.stringify(res.data.data.metadatas));
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    //getting and keeping all features
-    axios
-      .get(`features`)
-      .then(resp => {
-        axios.setCookie("features", JSON.stringify(resp.data.data.features));
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    requests.forEach(req => {
+      axios
+        .get(req.url)
+        .then(res =>
+          axios.setCookie(
+            req.name,
+            JSON.stringify(req.field ? res.data.data[req.field] : res.data.data)
+          )
+        )
+        .catch(err => {
+          console.warn(err);
+        });
+    });
   }
-  npm;
+
   render() {
     return (
       <div>

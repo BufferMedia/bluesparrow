@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const API_URL =
-  window.location.protocol + "//bluesparrowapi.herokuapp.com/api/v1";
+  // window.location.protocol + "//bluesparrowapi.herokuapp.com/api/v1";
+  window.location.protocol + "//localhost:8000/api/v1";
 
 const headers = () => {
   let item = localStorage.getItem("jwt_token");
@@ -133,7 +134,6 @@ class Request {
     return cookie ? JSON.parse(cookie) : null;
   };
   setCookie = (name, value) => {
-    var d = new Date();
     document.cookie = name + "=" + value + ";path=/";
   };
 }
