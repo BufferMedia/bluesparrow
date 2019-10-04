@@ -30,7 +30,9 @@ class ContentMasterAdd extends React.Component {
 
   render() {
 
-	console.log(this.state.availableMetadata)
+	//console.log(this.state.availableMetadata)
+	//console.log(this.state.availableContentTypes)
+	//console.log(this.state.availableCategory)
 
     return (
       <div>

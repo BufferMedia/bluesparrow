@@ -1,14 +1,15 @@
 import React from 'react'
 
 
-class Profile extends React.Component{
+class Profile extends React.Component {
     constructor(props){
         super(props)
     }
 
     render(){
-       return(
+       return (
            <div>
+			   {this.props.header}
             <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
                 {/*<!-- BEGIN: Left Aside -->
 				
