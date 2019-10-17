@@ -1,10 +1,34 @@
 import React from "react";
+import axios from '../axios'
+import { withRouter } from "react-router-dom";
 
 class CouponMap extends React.Component {
   constructor(props) {
     super(props);
-  }
+  
 
+  this.state={
+    create_date: '',
+    portal_id: '',
+    map_type: '', 
+    }
+}
+
+handleSubmit = e => {
+  e.preventDefault();
+  const { create_date, portal_id, map_type } = { ...this.state };
+
+  axios.post(`coupon/store`, { create_date, portal_id, map_type })
+      .then(res => {
+
+      alert("Coupon created successfully!");
+      this.props.history.push("/coupon_list");
+    })
+    .catch(err => {
+    alert("Coupon creation failed!");
+    console.error(err);
+    })
+  }
   render() {
     return (
       <div>
@@ -71,7 +95,7 @@ class CouponMap extends React.Component {
                 <div class="m-portlet m-portlet--full-height">
                   <form
                     class="m-form m-form--label-align-left- m-form--state-"
-                    id="m_form"
+                    id="m_form" onSubmit={this.handleSubmit}
                   >
                     {/*    <!--begin: Form Body --> */}
                     <div class="m-portlet__body m-portlet__body--no-padding">

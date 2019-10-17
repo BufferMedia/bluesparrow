@@ -1,5 +1,6 @@
 import React from "react";
 import axios from '../axios'
+import { withRouter } from "react-router-dom";
 
 class SubscriptionAdd extends React.Component {
 	constructor(props) {
@@ -416,4 +417,5 @@ class SubscriptionAdd extends React.Component {
 	}
 }
 
-export default SubscriptionAdd;
+
+export default withRouter (SubscriptionAdd);

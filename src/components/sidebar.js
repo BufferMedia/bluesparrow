@@ -18,7 +18,7 @@ class SideNavigation extends React.Component{
 					{/*<!-- BEGIN: Aside Menu -->*/}
 					<div id="m_ver_menu" className="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " m-menu-vertical="1" m-menu-scrollable="1" m-menu-dropdown-timeout="500" style={{"position": "relative"}}>
 						<ul className="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-							<li className="m-menu__item  m-menu__item--active" aria-haspopup="true"><a href="#" className="m-menu__link "><i className="m-menu__link-icon flaticon-line-graph"></i><span className="m-menu__link-title"> <span className="m-menu__link-wrap"> <span className="m-menu__link-text">Dashboard</span>
+							<li className="m-menu__item  m-menu__item--active" aria-haspopup="true"><a href="/" className="m-menu__link "><i className="m-menu__link-icon flaticon-line-graph"></i><span className="m-menu__link-title"> <span className="m-menu__link-wrap"> <span className="m-menu__link-text">Dashboard</span>
 								<span className="m-menu__link-badge"></span> </span></span></a></li>
 							<li className="m-menu__section ">
 								<h4 className="m-menu__section-text">MAIN</h4>
@@ -65,13 +65,13 @@ class SideNavigation extends React.Component{
 									</ul>
 								</div>
 							</li>
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon flaticon-layers"></i><span class="m-menu__link-text">Publisher</span><i
-									 class="m-menu__ver-arrow la la-angle-right"></i></a>
-								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-									<ul class="m-menu__subnav">
-										<li class="m-menu__item " aria-haspopup="true"><a href="add_portal" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Create Portal</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="list_portal" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">List Portal</span></a></li>
-										<li class="m-menu__item " aria-haspopup="true"><a href="content_portal_mapping" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Content Portal Mapping</span></a></li>
+							<li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" className="m-menu__link m-menu__toggle"><i className="m-menu__link-icon flaticon-layers"></i><span className="m-menu__link-text">Publisher</span><i
+									 className="m-menu__ver-arrow la la-angle-right"></i></a>
+								<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
+									<ul className="m-menu__subnav">
+										<li className="m-menu__item " aria-haspopup="true"><a href="add_portal" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Create Portal</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="list_portal" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">List Portal</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="content_portal_mapping" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Content Portal Mapping</span></a></li>
                                                                                 
 									</ul>
 								</div>
@@ -105,7 +105,7 @@ class SideNavigation extends React.Component{
 										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="feature_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Features</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="subscription_plans" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Subscription Plans</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
+										
 										
 									</ul>
 								</div>
@@ -121,7 +121,7 @@ class SideNavigation extends React.Component{
 									</ul>
 								</div>
 							</li>
-							<li className="m-menu__section ">
+							{/* <li className="m-menu__section ">
 								<h4 className="m-menu__section-text">SETTINGS</h4>
 								<i className="m-menu__section-icon flaticon-more-v2"></i>
 							</li>
@@ -158,7 +158,7 @@ class SideNavigation extends React.Component{
 										</li>
 									</ul>
 								</div>
-							</li>
+							</li> */}
 							<li className="m-menu__section ">
 								<h4 className="m-menu__section-text">SUPPORT & HELP</h4>
 								<i className="m-menu__section-icon flaticon-more-v2"></i>
@@ -178,8 +178,7 @@ class SideNavigation extends React.Component{
 								</a>
 							 	<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
 									<ul className="m-menu__subnav">
-										<li className="m-menu__item " aria-haspopup="true"><a href="new_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Inbox</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="user_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">help</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="support" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Support</span></a></li>
 										 {/*<!--<li className="m-menu__item " aria-haspopup="true"><a href="mail_compose.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">New Email</span></a></li>
 										 <li className="m-menu__item " aria-haspopup="true"><a href="mail_sent.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">History</span></a></li>
                                          <li className="m-menu__item " aria-haspopup="true"><a href="quick_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Help</span></a></li>-->	*/}												 
@@ -187,7 +186,7 @@ class SideNavigation extends React.Component{
 								</div>	
 				            </li>-->
 
-				            <li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover">
+				            {/* <li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover">
 								<a href="#" className="m-menu__link m-menu__toggle">
 									<i className="m-menu__link-icon flaticon-piggy-bank"></i><span className="m-menu__link-text">Feedback Forum</span><i className="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -205,7 +204,7 @@ class SideNavigation extends React.Component{
 										</li>									 
 									</ul>
 								</div>	
-				            </li>
+				            </li> */}
 						</ul>
 					</div>
 
