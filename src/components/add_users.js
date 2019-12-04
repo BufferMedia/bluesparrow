@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "../axios";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+
 
 class AddUsers extends React.Component {
   constructor(props) {
@@ -185,15 +188,11 @@ class AddUsers extends React.Component {
                           <span class="m-form__help"></span>
                         </div>
                         <div class="col-lg-6 m-form__group-sub">
-                          <input
-                            type="tel"
-                            id="hp"
-                            name="phone"
-                            class="form-control m-input"
-                            placeholder="Mobile Number*"
-                            value={phone}
-                            onChange={this.handleChange}
-                          />
+                        <PhoneInput
+                            placeholder="Enter phone number"
+                            value={ phone }
+                            onChange={ phone => this.setState({ phone }) } />
+
                         </div>
                       </div>
                     </div>
@@ -233,9 +232,7 @@ class AddUsers extends React.Component {
                             <option disabled selected value="">
                               Select Type*
                             </option>
-                            <option value="Content Provider">
-                              Content Provider
-                            </option>
+                            <option value="Content Provider">Content Provider </option>
                             <option value="Reviewer">Reviewer</option>
                             <option value="Publisher">Publisher</option>
                             <option value="Admin">Admin</option>

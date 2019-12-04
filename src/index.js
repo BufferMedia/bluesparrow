@@ -39,6 +39,7 @@ import Support from "./components/support"
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdbreact/dist/css/mdb.css";
+import 'react-phone-number-input/style.css';
 
 import axios from "./axios";
 

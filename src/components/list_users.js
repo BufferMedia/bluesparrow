@@ -66,45 +66,55 @@ class ListUsers extends React.Component {
       columns: [
         {
           label: "ID",
-          field: "id"
+          field: "id",
+          width: 70
         },
         {
           label: "Firstname",
-          field: "firstname"
+          field: "firstname",
+          width: 200
         },
         {
           label: "Lastname",
-          field: "lastname"
+          field: "lastname",
+          width: 200
         },
         {
           label: "Role",
           field: "role",
-          sort: "asc"
+          sort: "asc",
+          width: 90
         },
         {
           label: "Email",
-          field: "email"
+          field: "email",
+          width: 200
         },
         {
           label: "Username",
-          field: "username"
+          field: "username",
+          width: 200
         },
 
         {
           label: "Company",
-          field: "company"
+          field: "company",
+          width: 200
         },
         {
           label: "Designation",
-          field: "designation"
+          field: "designation",
+          width: 150
         },
         {
           label: "Phone Number",
-          field: "phone"
+          field: "phone",
+          width: 100
         },
         {
           label: "Status",
-          field: "status"
+          field: "status",
+          width: 100
         },
 
         {
@@ -271,9 +281,8 @@ class ListUsers extends React.Component {
                                     id="m_form_status"
                                   >
                                     <option value="">All</option>
-                                    <option value="1">Pending</option>
-                                    <option value="2">Delivered</option>
-                                    <option value="3">Canceled</option>
+                                    <option value="1">Active</option>
+                                    <option value="2">Inactive</option>
                                   </select>
                                 </div>
                               </div>
@@ -301,7 +310,7 @@ class ListUsers extends React.Component {
                               </div>
                               <div className="d-md-none m--margin-bottom-10"></div>
                             </div>
-                            <div className="col-md-4">
+                           {/*  <div className="col-md-4">
                               <div className="m-input-icon m-input-icon--left">
                                 <input
                                   type="text"
@@ -315,7 +324,7 @@ class ListUsers extends React.Component {
                                   </span>
                                 </span>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         <div className="col-xl-4 order-1 order-xl-2 m--align-right">
@@ -337,7 +346,12 @@ class ListUsers extends React.Component {
                                   
 								<!--begin: Datatable -->*/}
                     <div>
-                      <MDBDataTable striped bordered hover data={data} />
+                      <MDBDataTable 
+                      scrollX
+                      striped 
+                      bordered 
+                      hover 
+                      data={data} />
                     </div>
                     {/*<!--end: Datatable -->*/}
                   </div>
