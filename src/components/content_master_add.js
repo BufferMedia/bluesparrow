@@ -78,7 +78,7 @@ class ContentMasterAdd extends React.Component {
         } = this.state;
   
         axios
-          .post("content/store", {
+          .post("content/store", axios.getHeaders(), {
             title,
             description,
             content_type,
@@ -425,8 +425,6 @@ class ContentMasterAdd extends React.Component {
 
   render() {
     const PAGE_DATA = this.renderPage();
-    //console.log(this.state.availableMetadata)
-
     return (
       <div>
         <div>

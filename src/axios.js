@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const API_URL =
-  // window.location.protocol + "//bluesparrowapi.herokuapp.com/api/v1";
-  window.location.protocol + "//localhost:8000/api/v1";
+  window.location.protocol + "//bluesparrowapi.herokuapp.com/api/v1";
+  // window.location.protocol + "//localhost:8000/api/v1";
 
 const headers = () => {
   let item = localStorage.getItem("jwt_token");
@@ -87,7 +87,7 @@ class Request {
     }
 
     //console.log(`Got to this point time:${time_expire}`)
-    if (parseInt(headers.time_expire) != NaN) {
+    if (parseInt(headers.time_expire) !== NaN) {
       // const today = new Date()
       // const todayStamp = today.getTime();
       // const expired = (todayStamp >= time_expire) ? true : false;
@@ -112,10 +112,10 @@ class Request {
     var ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
       var c = ca[i];
-      while (c.charAt(0) == " ") {
+      while (c.charAt(0) === " ") {
         c = c.substring(1);
       }
-      if (c.indexOf(name) == 0) {
+      if (c.indexOf(name) === 0) {
         return c.substring(name.length, c.length);
       }
     }
@@ -131,6 +131,14 @@ class Request {
   };
   getMetadata = () => {
     const cookie = this.getCookie("metadata");
+    return cookie ? JSON.parse(cookie) : null;
+  };
+  getFeatures = () => {
+    const cookie = this.getCookie("feature");
+    return cookie ? JSON.parse(cookie) : null;
+  };
+  getPortals = () => {
+    const cookie = this.getCookie("feature");
     return cookie ? JSON.parse(cookie) : null;
   };
   setCookie = (name, value) => {

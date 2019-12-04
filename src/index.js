@@ -35,9 +35,11 @@ import CouponList from "./components/coupon_list";
 import CouponMap from "./components/coupon_map";
 import Profile from "./components/profile";
 import Orders from "./components/orders";
+import Support from "./components/support"
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdbreact/dist/css/mdb.css";
+import 'react-phone-number-input/style.css';
 
 import axios from "./axios";
 
@@ -291,6 +293,18 @@ class Main extends React.Component {
                 component={() => {
                   return (
                     <Orders
+                      sidebar={sidebarcomponent}
+                      footer={footerComponent}
+                      header={headercomponent}
+                    />
+                  );
+                }}
+              />
+              <Route
+                path="/support"
+                component={() => {
+                  return (
+                    <Support
                       sidebar={sidebarcomponent}
                       footer={footerComponent}
                       header={headercomponent}

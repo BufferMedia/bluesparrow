@@ -44,11 +44,13 @@ class FeatureList extends React.Component {
       columns: [
         {
           label: "Feature Id",
-          field: "id"
+          field: "id",
+          width: 100
         },
         {
           label: "Feature Name",
-          field: "name"
+          field: "name",
+          width: 270
         }
       ],
 
@@ -198,7 +200,7 @@ class FeatureList extends React.Component {
                     {/*<!--begin: Search Form -->*/}
                     <div className="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
                       <div className="row align-items-center">
-                        <div className="col-xl-8 order-2 order-xl-1">
+                    {/*     <div className="col-xl-8 order-2 order-xl-1">
                           <div className="form-group m-form__group row align-items-center">
                             <div className="col-md-4">
                               <div className="m-form__group m-form__group--inline">
@@ -257,8 +259,8 @@ class FeatureList extends React.Component {
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="col-xl-4 order-1 order-xl-2 m--align-right">
+                        </div> */}
+                        <div className="col-xl-12 order-1 order-xl-2 m--align-right">
                           <a
                             href="feature_add"
                             className="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"

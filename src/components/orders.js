@@ -47,7 +47,7 @@ class Orders extends React.Component {
     const data = {
       columns: [
         {
-          label: "orderId",
+          label: "Id",
           field: "id"
         },
         {
@@ -223,7 +223,7 @@ class Orders extends React.Component {
                             <div className="col-md-4">
                               <div className="m-form__group m-form__group--inline">
                                 <div className="m-form__label">
-                                  <label>Status:</label>
+                                  <label>Portal:</label>
                                 </div>
                                 <div className="m-form__control">
                                   <select
@@ -231,9 +231,9 @@ class Orders extends React.Component {
                                     id="m_form_status"
                                   >
                                     <option value="">All</option>
-                                    <option value="1">Pending</option>
-                                    <option value="2">Delivered</option>
-                                    <option value="3">Canceled</option>
+                                    <option value="1">Audebook</option>
+                                    <option value="2">PlayCode</option>
+                                    <option value="3">Muzik365</option>
                                   </select>
                                 </div>
                               </div>
@@ -243,7 +243,7 @@ class Orders extends React.Component {
                               <div className="m-form__group m-form__group--inline">
                                 <div className="m-form__label">
                                   <label className="m-label m-label--single">
-                                    Type:
+                                    Currency:
                                   </label>
                                 </div>
                                 <div className="m-form__control">
@@ -252,16 +252,14 @@ class Orders extends React.Component {
                                     id="m_form_type"
                                   >
                                     <option value="">All</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Publisher</option>
-                                    <option value="3">Reviewer</option>
-                                    <option value="3">Content Provider</option>
+                                    <option value="1">NGN</option>
+                                    <option value="2">GHS</option>
                                   </select>
                                 </div>
                               </div>
                               <div className="d-md-none m--margin-bottom-10"></div>
                             </div>
-                            <div className="col-md-4">
+                            {/* <div className="col-md-4">
                               <div className="m-input-icon m-input-icon--left">
                                 <input
                                   type="text"
@@ -275,7 +273,7 @@ class Orders extends React.Component {
                                   </span>
                                 </span>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         {/*  <div className="col-xl-4 order-1 order-xl-2 m--align-right">

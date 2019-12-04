@@ -43,14 +43,7 @@ class Profile extends React.Component {
 																Quick Actions
 															</span>
 														</li>
-														<li class="m-nav__item">
-															<a href="" class="m-nav__link">
-																<i class="m-nav__link-icon flaticon-share"></i>
-																<span class="m-nav__link-text">
-																	Activity
-																</span>
-															</a>
-														</li>
+														
 														<li class="m-nav__item">
 															<a href="" class="m-nav__link">
 																<i class="m-nav__link-icon flaticon-chat-1"></i>
@@ -63,7 +56,7 @@ class Profile extends React.Component {
 															<a href="" class="m-nav__link">
 																<i class="m-nav__link-icon flaticon-info"></i>
 																<span class="m-nav__link-text">
-																	FAQ
+																	Sales
 																</span>
 															</a>
 														</li>
@@ -121,31 +114,7 @@ class Profile extends React.Component {
 													Section
 												</span>
 											</li>
-											<li class="m-nav__item">
-												<a href="header/profile&amp;demo=default.html" class="m-nav__link">
-													<i class="m-nav__link-icon flaticon-profile-1"></i>
-													<span class="m-nav__link-title">
-														<span class="m-nav__link-wrap">
-															<span class="m-nav__link-text">
-																My Profile
-															</span>
-															<span class="m-nav__link-badge">
-																<span class="m-badge m-badge--success">
-																	2
-																</span>
-															</span>
-														</span>
-													</span>
-												</a>
-											</li>
-											<li class="m-nav__item">
-												<a href="header/profile&amp;demo=default.html" class="m-nav__link">
-													<i class="m-nav__link-icon flaticon-share"></i>
-													<span class="m-nav__link-text">
-														Activity
-													</span>
-												</a>
-											</li>
+											
 											<li class="m-nav__item">
 												<a href="header/profile&amp;demo=default.html" class="m-nav__link">
 													<i class="m-nav__link-icon flaticon-chat-1"></i>
@@ -162,16 +131,9 @@ class Profile extends React.Component {
 													</span>
 												</a>
 											</li>
+											
 											<li class="m-nav__item">
-												<a href="header/profile&amp;demo=default.html" class="m-nav__link">
-													<i class="m-nav__link-icon flaticon-time-3"></i>
-													<span class="m-nav__link-text">
-														Events
-													</span>
-												</a>
-											</li>
-											<li class="m-nav__item">
-												<a href="header/profile&amp;demo=default.html" class="m-nav__link">
+												<a href="support" class="m-nav__link">
 													<i class="m-nav__link-icon flaticon-lifebuoy"></i>
 													<span class="m-nav__link-text">
 														Support
@@ -254,7 +216,7 @@ class Profile extends React.Component {
 												</li>
 												<li class="nav-item m-tabs__item">
 													<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_user_profile_tab_3" role="tab">
-														Settings
+														Sales
 													</a>
 												</li>
 											</ul>

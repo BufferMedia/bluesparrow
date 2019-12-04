@@ -105,7 +105,7 @@ class SideNavigation extends React.Component{
 										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="feature_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Features</span></a></li>
 										<li className="m-menu__item " aria-haspopup="true"><a href="subscription_plans" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Subscription Plans</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="coupon_list" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Coupons</span></a></li>
+										
 										
 									</ul>
 								</div>
@@ -178,8 +178,7 @@ class SideNavigation extends React.Component{
 								</a>
 							 	<div className="m-menu__submenu "><span className="m-menu__arrow"></span>
 									<ul className="m-menu__subnav">
-										<li className="m-menu__item " aria-haspopup="true"><a href="new_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Inbox</span></a></li>
-										<li className="m-menu__item " aria-haspopup="true"><a href="user_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">help</span></a></li>
+										<li className="m-menu__item " aria-haspopup="true"><a href="support" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Support</span></a></li>
 										 {/*<!--<li className="m-menu__item " aria-haspopup="true"><a href="mail_compose.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">New Email</span></a></li>
 										 <li className="m-menu__item " aria-haspopup="true"><a href="mail_sent.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">History</span></a></li>
                                          <li className="m-menu__item " aria-haspopup="true"><a href="quick_support.html" className="m-menu__link "><i className="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span className="m-menu__link-text">Help</span></a></li>-->	*/}												 
@@ -187,7 +186,7 @@ class SideNavigation extends React.Component{
 								</div>	
 				            </li>-->
 
-				            <li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover">
+				            {/* <li className="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover">
 								<a href="#" className="m-menu__link m-menu__toggle">
 									<i className="m-menu__link-icon flaticon-piggy-bank"></i><span className="m-menu__link-text">Feedback Forum</span><i className="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -205,7 +204,7 @@ class SideNavigation extends React.Component{
 										</li>									 
 									</ul>
 								</div>	
-				            </li>
+				            </li> */}
 						</ul>
 					</div>
 

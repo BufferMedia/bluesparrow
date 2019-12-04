@@ -23,8 +23,7 @@ class ListPortal extends React.Component {
         .get("portals/paginate")
         .then(resp => {
           console.log(resp.data.data);
-          this.setState({
-            portalList: resp.data.data.portals.map(portal => {
+          this.setState({portalList: resp.data.data.portals.map(portal => {
               return {
                 id: portal.id,
                 name: portal.name,

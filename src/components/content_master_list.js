@@ -304,7 +304,7 @@ class ContentMasterList extends React.Component {
 
 								<!--begin: Datatable -->*/}
 
-                    <MDBDataTable striped bordered hover data={data} />
+                    <MDBDataTable className="table" striped bordered hover data={data} />
 
                     {/*<!--end: Datatable -->*/}
                   </div>

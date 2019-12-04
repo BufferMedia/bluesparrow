@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "../axios";
+import util from "../util";
+import {MDBBtn, MDBDataTable, MDBTableBody, MDBTableHead, Row, Cols, Card, CardBody } from "mdbreact";
 
 class CouponList extends React.Component {
   constructor(props) {
@@ -7,34 +9,117 @@ class CouponList extends React.Component {
 
     this.state = {
       couponList: []
-    };
+    }
   }
 
   componentDidMount() {
     this.loadCoupon();
   }
 
-  /*  loadCoupon = async () =>{
 
-        try{
-            axios.get('order', axios.getHeaders())
-                .then(resp =>{
-                    console.log(resp)
-                    this.setState(orderList: resp.data.data.orders.map( orders => {
-                        return{
-                              
-                        }
-                    }))
 
-                })
-
-        }catch(err){
-            console.log(err)
-        }
-
-    } */
+  loadCoupon = async => {
+    try {
+      axios
+        .get("coupon")
+        .then(resp => {
+          console.log(resp.data.data);
+          this.setState({couponList: resp.data.data.map(coup => {
+              return {
+                id: coup.id,
+                title: coup.title,
+                code: coup.code,
+                description: coup.description,
+                amount: coup.amount,
+                country: coup.country,
+                currency: coup.currency,
+                portal: util.serializeData(coup.portal),
+                category: util.serializeData(coup.category),
+                map_type: coup.map_type,
+                subscription: coup.subscription,
+                //MAP: <MDBBtn color="purple" outline size="">Button</MDBBtn>
+                
+              };
+            })
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          this.setState({ loading: false });
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   render() {
+
+    const data = {
+      columns: [
+        {
+          label: "ID",
+          field: "id",
+          width: 50
+        },
+        {
+          label: "Title",
+          field: "title",
+          width: 100
+        },
+        {
+          label: "Code",
+          field: "code",
+          width: 100
+        },
+        {
+          label: "Amount",
+          field: "amount",
+          width: 100
+        },
+        {
+          label: "Description",
+          selector: "description",
+          width: 200
+        },
+        {
+          label: "Country",
+          selector: "country",
+          width: 100
+        },
+       
+        {
+          label: "Currency",
+          selector: " currency",
+          width: 100
+        },
+        {
+          label: "Portal",
+          selector: "portal",
+          width: 100
+        },
+        {
+          label: "Category",
+          selector: "category",
+          width: 270
+        },
+        {
+          label: "Map Type",
+          selector: "map_type",
+          width: 100
+        },
+        {
+          label: "Subscription",
+          selector: "subscription",
+          width: 100
+        },
+        
+        {
+          label: "Map",
+          MAP: <MDBBtn color="purple" outline size="sm">Button</MDBBtn>
+        }
+      ],
+      rows: this.state.couponList
+    };
     return (
       <div>
         <div className="m-grid m-grid--hor m-grid--root m-page">
@@ -184,7 +269,7 @@ class CouponList extends React.Component {
                             <div className="col-md-4">
                               <div className="m-form__group m-form__group--inline">
                                 <div className="m-form__label">
-                                  <label>Status:</label>
+                                  <label>Portal:</label>
                                 </div>
                                 <div className="m-form__control">
                                   <select
@@ -192,9 +277,9 @@ class CouponList extends React.Component {
                                     id="m_form_status"
                                   >
                                     <option value="">All</option>
-                                    <option value="1">Pending</option>
-                                    <option value="2">Delivered</option>
-                                    <option value="3">Canceled</option>
+                                    <option value="1">Audebook</option>
+                                    <option value="2">PlayCode</option>
+                                    <option value="3">Muzik365</option>
                                   </select>
                                 </div>
                               </div>
@@ -204,7 +289,7 @@ class CouponList extends React.Component {
                               <div className="m-form__group m-form__group--inline">
                                 <div className="m-form__label">
                                   <label className="m-label m-label--single">
-                                    Type:
+                                    Currency:
                                   </label>
                                 </div>
                                 <div className="m-form__control">
@@ -213,16 +298,16 @@ class CouponList extends React.Component {
                                     id="m_form_type"
                                   >
                                     <option value="">All</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Publisher</option>
-                                    <option value="3">Reviewer</option>
-                                    <option value="3">Content Provider</option>
+                                    <option value="1">NGN</option>
+                                    <option value="2">GHS</option>
+                                    {/* <option value="3">OTHERS</option> */}
+                                    
                                   </select>
                                 </div>
                               </div>
                               <div className="d-md-none m--margin-bottom-10"></div>
                             </div>
-                            <div className="col-md-4">
+                           {/*  <div className="col-md-4">
                               <div className="m-input-icon m-input-icon--left">
                                 <input
                                   type="text"
@@ -236,7 +321,7 @@ class CouponList extends React.Component {
                                   </span>
                                 </span>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         <div className="col-xl-4 order-1 order-xl-2 m--align-right">
@@ -258,12 +343,14 @@ class CouponList extends React.Component {
                               
                             <!--begin: Datatable -->*/}
                     <div>
-                      {/*  <MDBDataTable
-                                        striped
-                                        bordered
-                                        hover
-                                        data={data}
-                                    /> */}
+                          <MDBDataTable 
+                                  scrollX
+                                  striped
+                                  bordered
+                                  hover
+                                  data={data}
+                                    /> 
+                                    
                     </div>
                     {/*<!--end: Datatable -->*/}
                   </div>

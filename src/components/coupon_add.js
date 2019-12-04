@@ -1,9 +1,45 @@
 import React from "react";
+import axios from '../axios'
+import { withRouter } from "react-router-dom";
 
 class CouponAdd extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state={
+       
+      title: '',
+      description: '',
+      amount: '',
+      code: '', 
+      country: 'ngn',
+      currency: '',
+      start_date: '',
+      expiry_date: '',
+      min_amount: '',
+      max_amount: '', 
+      status: 0,
+    }
+
   }
+
+  handleSubmit = e => {
+		e.preventDefault();
+		const { title, description, amount, code, country, currency, start_date, expiry_date,  min_amount, max_amount, status } = { ...this.state };
+	
+		axios.post(`coupon/store`, { title, description, amount, code, country, currency, start_date, expiry_date,  min_amount, max_amount, status})
+		    .then(res => {
+
+			  alert("Coupon created successfully!");
+			  this.props.history.push("/coupon_list");
+		  })
+		  .catch(err => {
+			alert("Coupon creation failed!");
+			console.error(err);
+		  })
+    }
+  
+
 
   render() {
     return (
@@ -72,7 +108,7 @@ class CouponAdd extends React.Component {
                 <div class="m-portlet m-portlet--full-height">
                   <form
                     class="m-form m-form--label-align-left- m-form--state-"
-                    id="m_form"
+                    id="m_form" onSubmit={this.handleSubmit}
                   >
                     <div class="m-portlet__body m-portlet__body--no-padding">
                       <div
@@ -101,18 +137,25 @@ class CouponAdd extends React.Component {
                           }}
                         >
                           <div class="m-demo__preview">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                              <label for="example-text-input">
-                                * Select Coupon Country
-                              </label>
-                              <select
-                                class="form-control m-input m-input--air"
-                                id="currencySelector"
-                              >
-                                <option value="ngn">Nigeria - NGN</option>
-                                <option value="ghs">Ghana - GHS</option>
-                                <option value="usd">Other - USD</option>
-                              </select>
+                          <div class="col-lg-12 col-md-12 col-sm-12">
+													<label for="example-text-input">
+														* Select Country
+                                             </label>
+													<select name="currency"
+														class="form-control m-input m-input--air"
+														id="currencySelector1"
+														value={this.state.country}
+														onChange={(e)=>{this.setState({country: e.target.value, currency: e.target.value})}}
+														required
+														defaultValue="ngn"
+													>
+														<option value="">Select Country</option>
+														<option value="ngn">Nigeria - NGN</option>
+														<option value="ghs">Ghana - GHS</option>
+														<option value="usd">Other - USD</option>
+													</select>
+											    
+                              
                               <span class="m-form__help">
                                 Please select country you want to apply coupon
                               </span>
@@ -127,6 +170,9 @@ class CouponAdd extends React.Component {
                                 type="text"
                                 class="form-control m-input m-input--air"
                                 placeholder="Coupon Title"
+                                onChange={ (e) => {this.setState({ title: e.target.value })
+                                    }} 
+                                value={this.state.title}
                               />
                               <span class="m-form__help">
                                 Please enter your preferred coupon title
@@ -141,6 +187,9 @@ class CouponAdd extends React.Component {
                                 type="text"
                                 class="form-control m-input m-input--air"
                                 placeholder="Coupon Code"
+                                onChange={ e => {this.setState({ code: e.target.value })
+                                    }} 
+                                value={this.state.code}
                               />
                               <span class="m-form__help">
                                 Please enter your coupon code
@@ -155,6 +204,9 @@ class CouponAdd extends React.Component {
                                 id="exampleTextarea"
                                 rows="4"
                                 placeholder="Coupon Description"
+                                onChange={ e => {this.setState({ description: e.target.value })
+                                    }} 
+                                value={this.state.description}
                               ></textarea>
                               <span class="m-form__help">
                                 Type your coupon description
@@ -199,6 +251,8 @@ class CouponAdd extends React.Component {
                                     class="form-control m-input--air"
                                     id="priceorpercent"
                                     placeholder="Price"
+                                    value={this.state.amount}
+                                    onChange={ (e) => {this.setState({amount: e.target.value})}}
                                   />
                                 </div>
                               </div>
@@ -210,9 +264,9 @@ class CouponAdd extends React.Component {
                                   Coupon Currency
                                 </label>
                                 <div class="m--margin-top-10">
-                                  <div class="currency" data-currencyName="ngn">
+                                  <div class="currency">
                                     <span>
-                                      <h4>NGN</h4>
+                                      <h4>{this.state.country.toUpperCase()}</h4>
                                     </span>
                                   </div>
                                 </div>
@@ -232,7 +286,9 @@ class CouponAdd extends React.Component {
                                   <input
                                     type="text"
                                     class="form-control m-input--air"
-                                    placeholder="Price"
+                                    placeholder="Min Amount"
+                                    value={this.state.min_amount}
+                                    onChange={ (e) =>{ this.setState({min_amount: e.target.value})}}
                                   />
                                 </div>
                               </div>
@@ -244,7 +300,9 @@ class CouponAdd extends React.Component {
                                   <input
                                     type="text"
                                     class="form-control m-input--air"
-                                    placeholder="Price"
+                                    placeholder="Max Amount"
+                                    value={this.state.max_amount}
+                                    onChange={ (e) => {this.setState({max_amount: e.target.value})}}
                                   />
                                 </div>
                               </div>
@@ -271,8 +329,10 @@ class CouponAdd extends React.Component {
                                   <input
                                     type="date"
                                     class="form-control m-input m-input--air"
-                                    placeholder="2017-11-29 00:30"
-                                    id="m_datetimepicker_3"
+                                    placeholder="2019-10-29 00:30"
+                                    id="m_datetimepicker"
+                                    value={this.state.start_date}
+                                    onChange={(e) =>{this.setState({start_date: e.target.value})}}
                                   />
                                   <div class="input-group-append">
                                     <span class="input-group-text">
@@ -298,8 +358,10 @@ class CouponAdd extends React.Component {
                                   <input
                                     type="date"
                                     class="form-control m-input m-input--air"
-                                    placeholder="2018-11-29 00:30"
+                                    placeholder="2019-11-29 00:30"
                                     id="m_datetimepicker_2"
+                                    value={this.state.expiry_date}
+                                    onChange={ (e) =>{this.setState({expiry_date: e.target.value})}}
                                   />
                                   <div class="input-group-append">
                                     <span class="input-group-text">
@@ -321,7 +383,7 @@ class CouponAdd extends React.Component {
                         <div class="row">
                           <div class="col-lg-5"></div>
                           <div class="col-lg-6">
-                            <button class="btn btn-primary">ADD PORTAL</button>
+                            <button class="btn btn-brand">Create</button>
                           </div>
                         </div>
                       </div>
@@ -386,4 +448,4 @@ class CouponAdd extends React.Component {
   }
 }
 
-export default CouponAdd;
+export default withRouter(CouponAdd)

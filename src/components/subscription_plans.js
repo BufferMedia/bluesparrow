@@ -22,17 +22,14 @@ class SubscriptionPlans extends React.Component {
       .then(resp => {
         const data = resp.data.data.allSubscriptions;
         console.log(data);
-        this.setState({
-          subList: data.map(sub => {
+        this.setState({subList: data.map(sub => {
             const compressedData = {
               id: sub.id,
               name: sub.subscription_name,
               price: sub.price,
               portal: util.serializeData(sub.portals),
-              features: sub.portals
-                .map(s => {
-                  return util.serializeData(s.features);
-                })
+              features: sub.portals.map(s => {return util.serializeData(s.features);
+                  })
                 .join(", ")
             };
             console.log(compressedData);
